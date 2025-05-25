@@ -29,8 +29,8 @@ def rain(walls):
         # Find maximum height to the right
         right_max = max(walls[i + 1:])
 
-        # The water trapped at current position is min of left_max and right_max
-        # minus the height of current wall (if positive)
+        # The water trapped at current position is the minimum of left_max
+        # and right_max, minus the height of current wall (if positive)
         min_height = min(left_max, right_max)
         if min_height > walls[i]:
             water += min_height - walls[i]
